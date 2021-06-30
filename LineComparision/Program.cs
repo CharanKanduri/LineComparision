@@ -8,6 +8,9 @@ namespace LineComparision
         {
             Console.WriteLine("Welcome to LineComparision Program");
             int x1, x2, y1, y2;
+            int stringLenght1 = 0;
+            int stringLength2 = 0;
+
 
             String[] lengthArray = new String[2];
 
@@ -29,9 +32,20 @@ namespace LineComparision
             }
             Console.WriteLine("The lengths are" + lengthArray[0] + " " + lengthArray[1]);
 
-            if (string.Equals(lengthArray[0], lengthArray[1])) 
+            stringLenght1 = lengthArray[0].Length;
+            stringLength2 = lengthArray[1].Length;
+
+            if (string.Equals(lengthArray[0], lengthArray[1]))
             {
                 Console.WriteLine("\nBoth Lengths are same");
+            }
+            else if (stringLenght1 > stringLength2)
+            {
+                Console.WriteLine("\nSecond line is larger");
+            }
+            else
+            {
+                Console.WriteLine("\nFirst line is larger"); 
             }
         }
 
